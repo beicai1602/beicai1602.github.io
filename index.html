@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src='angular.min.js'></script>
+	<script type="text/javascript">
+		angular.module("a",[]).controller("b",["$scope",function($scope){
+				$scope.fn=function(){
+					console.log(1)
+				}
+				/*if($scope.up.psw&&$scope.up.repsw){
+					if($scope.up.psw==$scope.up.repsw){
+						$scope.isdisable=true
+					}
+					
+				}*/
+		}])
+	</script>
+</head>
+<body ng-app='a'>
+<div ng-controller='b'>
+	{{up.psw}}
+	<input type='text' ng-model='up.psw'>
+	<input type='text' ng-model='up.repsw' ng-focus='fn()' ng-change='fn()'>
+	<button ng-disabled='isdisable'>submit</button>
+</div>
+</body>
+</html>
