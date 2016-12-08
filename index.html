@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title></title>
+	
+	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src='angular.min.js'></script>
 	<script type="text/javascript">
 		angular.module("a",[]).controller("b",["$scope",function($scope){
@@ -17,6 +19,7 @@
 	</script>
 </head>
 <body ng-app='a'>
+	<div class="a">123</div>
 <div ng-controller='b'>
 	{{up.psw}}
 	<input type='text' ng-model='up.psw'>
